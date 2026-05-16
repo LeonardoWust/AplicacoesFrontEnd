@@ -1,0 +1,22 @@
+{
+  "produtos": [
+    {
+      "id": 1,
+      "nome": "Notebook Dell",
+      "descricao": "Notebook Dell Inspiron 15, 8GB RAM, 256GB SSD",
+      "preco": 3500
+    },
+    {
+      "id": 2,
+      "nome": "Mouse Logitech",
+      "descricao": "Mouse sem fio Logitech MX Master 3",
+      "preco": 450
+    },
+    {
+      "id": 3,
+      "nome": "Teclado Mecânico",
+      "descricao": "Teclado mecânico RGB HyperX Alloy",
+      "preco": 380
+    }
+  ]
+}

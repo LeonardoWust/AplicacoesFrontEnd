@@ -1,0 +1,55 @@
+<div class="container">
+  @if (erro) {
+    <div class="alert alert-error">
+      {{ erro }}
+    </div>
+  }
+
+  @if (carregando) {
+    <div class="loading">
+      <div class="spinner"></div>
+      <p>Carregando produtos...</p>
+    </div>
+  }
+
+  @if (!carregando && produtos.length === 0 && !erro) {
+    <div class="empty-state">
+      <p>Nenhum produto cadastrado.</p>
+      <a routerLink="/novo" class="btn btn-primary">Cadastrar primeiro produto</a>
+    </div>
+  }
+
+  @if (!carregando && produtos.length > 0) {
+    <div class="table-container">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Preço</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (produto of produtos; track produto.id) {
+            <tr>
+              <td>{{ produto.id }}</td>
+              <td><strong>{{ produto.nome }}</strong></td>
+              <td>{{ produto.descricao }}</td>
+              <td class="preco">{{ produto.preco | currency:'BRL' }}</td>
+              <td class="acoes">
+                <a [routerLink]="['/editar', produto.id]" class="btn btn-sm btn-warning">
+                  ✏️ Editar
+                </a>
+                <button (click)="excluir(produto.id!)" class="btn btn-sm btn-danger">
+                  🗑️ Excluir
+                </button>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

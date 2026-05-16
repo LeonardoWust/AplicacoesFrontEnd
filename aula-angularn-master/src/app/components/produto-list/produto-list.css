@@ -1,0 +1,36 @@
+.card {
+  padding: 20px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #fff;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+th {
+  background: #f3f4f6;
+}
+
+button {
+  margin-right: 8px;
+  padding: 7px 10px;
+  border: 0;
+  border-radius: 6px;
+  background: #4b5563;
+  color: #fff;
+  cursor: pointer;
+}

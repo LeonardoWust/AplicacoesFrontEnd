@@ -1,0 +1,7 @@
+.page {
+    max-width: 1000px;
+    margin: 32px auto;
+    padding: 0 16px;
+    display: grid;
+    gap: 24px;
+}

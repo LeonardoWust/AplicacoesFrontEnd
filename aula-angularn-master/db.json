@@ -1,0 +1,10 @@
+{
+    "produtos": [
+        {
+        "Id": 2,
+        "nome": "Notebook Dell",
+        "descricao": "Notebook Dell Inspiron 15 3000, Intel Core i5-1134G7, 8GB RAM, 256GB SSD",
+        "preco": 3500.00
+        },
+    ]
+}

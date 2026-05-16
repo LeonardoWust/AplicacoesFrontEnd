@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Tarefas</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body>
+
+  <!-- ===== CABEÇALHO ===== -->
+  <header>
+    <h1>📝 Minhas Tarefas</h1>
+    <p>Gerencie suas atividades do dia</p>
+  </header>
+
+  <!-- ===== CONTEÚDO PRINCIPAL ===== -->
+  <main>
+
+    <!-- Formulário para adicionar tarefas -->
+    <section id="formulario">
+
+      <input id="inputTarefa" type="text" placeholder="Digite uma nova tarefa">
+      <!-- TODO 3: Crie um campo de texto (input type="text") com:
+           - id="inputTarefa"
+           - placeholder="Digite uma nova tarefa..."
+      -->
+      <button onclick="adicionarTarefa()" id="btnAdicionar">Adicionar</button>
+
+      <!-- TODO 4: Crie um botão com:
+           - id="btnAdicionar"
+           - Texto: "Adicionar"
+           - Evento onclick que chame a função adicionarTarefa()
+      -->
+
+    </section>
+
+    <!-- Contador de tarefas -->
+    <section id="info">
+      <span id="contadorTexto">Nenhuma tarefa adicionada.</span>
+    </section>
+
+    <!-- Lista de tarefas -->
+    <section id="listaTarefas">
+      <ul id="lista">
+      </ul>
+
+      <!-- TODO 5: Crie uma lista não-ordenada com id="lista" -->
+
+    </section>
+
+  </main>
+
+  <!-- ===== RODAPÉ ===== -->
+  <footer>
+    <p>Aula 02 - Revisão HTML, CSS e JavaScript</p>
+  </footer>
+
+  <!-- TODO 6: Vincule o arquivo JavaScript localizado em assets/js/script.js -->
+   <script src="assets/js/script.js"></script>
+</body>
+</html>

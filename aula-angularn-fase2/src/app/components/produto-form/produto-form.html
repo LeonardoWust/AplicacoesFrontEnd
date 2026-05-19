@@ -1,0 +1,20 @@
+<section class="card">
+    <h2>{{ title }}</h2>
+
+    <form class="form" (ngSubmit)="salvar()">
+        <label>
+            Nome
+            <input type="text" name="nome" [(ngModel)]="produto.nome" placeholder="Ex: Notebook Dell"/>
+        </label>
+        <label>
+            Descrição
+            <input name="descricao" [(ngModel)]="produto.descricao" placeholder="Ex: Notebook Dell Inspiron 15"/>
+        </label>
+        <label>
+            Preco
+            <input type="number" name="preco" [(ngModel)]="produto.preco" placeholder="3500"/>
+        </label>
+        <button type="submit">Cadastrar</button>
+    </form>
+
+</section>

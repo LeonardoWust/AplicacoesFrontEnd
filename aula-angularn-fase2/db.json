@@ -1,0 +1,16 @@
+{
+  "produtos": [
+    {
+      "id": "1",
+      "nome": "Notebook Dell",
+      "descricao": "Notebook Dell Inspiron 15 3000, Intel Core i5-1135G7, 8GB RAM, 256GB SSD, Tela 15.6\" Full HD, Windows 10",
+      "preco": 3500
+    },
+    {
+      "id": "2",
+      "nome": "Notebook Positivo",
+      "descricao": "Notebook `Positivo Vision`, 8GB RAM, 256GB SSD",
+      "preco": 5500
+    }
+  ]
+}

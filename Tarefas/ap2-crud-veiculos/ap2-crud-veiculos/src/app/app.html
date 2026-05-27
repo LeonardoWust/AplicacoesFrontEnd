@@ -1,0 +1,17 @@
+<app-navbar></app-navbar>
+
+<main class="container">
+  <app-veiculo-form
+    [veiculoParaEditar]="veiculoParaEditar"
+    (salvo)="onSalvo()"
+    (cancelouEdicao)="onCancelouEdicao()"
+  ></app-veiculo-form>
+
+  <app-veiculo-list
+    (editarVeiculo)="onEditarVeiculo($event)"
+  ></app-veiculo-list>
+</main>
+
+<footer class="footer">
+  <p>AP2 — Aplicações Front-End • ULBRA • CRUD de Veículos com Angular + JSON Server</p>
+</footer>

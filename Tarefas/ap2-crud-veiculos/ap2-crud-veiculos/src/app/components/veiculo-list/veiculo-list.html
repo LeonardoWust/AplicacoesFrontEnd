@@ -1,0 +1,85 @@
+<section class="list-section">
+  <div class="list-header">
+    <h2 class="list-title">🚙 Veículos Cadastrados</h2>
+    <div class="list-meta">
+      @if (!carregando && !erro) {
+        <span class="total-badge">{{ veiculos.length }} veículo(s)</span>
+      }
+      <button type="button" class="btn-atualizar" (click)="carregarVeiculos()" title="Recarregar lista">
+        🔄 Atualizar
+      </button>
+    </div>
+  </div>
+
+  @if (carregando) {
+    <div class="estado-lista">
+      <div class="spinner"></div>
+      <p>Carregando veículos...</p>
+    </div>
+  }
+
+  @if (erro) {
+    <div class="estado-lista erro">
+      <p class="estado-icon">⚠️</p>
+      <p>{{ erro }}</p>
+      <button type="button" class="btn-tentar" (click)="carregarVeiculos()">Tentar novamente</button>
+    </div>
+  }
+
+  @if (!carregando && !erro && veiculos.length === 0) {
+    <div class="estado-lista vazio">
+      <p class="estado-icon">🚫</p>
+      <p>Nenhum veículo cadastrado ainda.</p>
+      <p class="estado-dica">Use o formulário acima para adicionar o primeiro veículo.</p>
+    </div>
+  }
+
+  @if (!carregando && !erro && veiculos.length > 0) {
+    <div class="table-wrapper">
+      <table class="tabela-veiculos">
+        <thead>
+          <tr>
+            <th>Veículo</th>
+            <th>Ano</th>
+            <th>Cor</th>
+            <th>Placa</th>
+            <th>Preço</th>
+            <th>Status</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (veiculo of veiculos; track veiculo.id) {
+            <tr class="linha-veiculo">
+              <td class="td-veiculo">
+                <span class="veiculo-marca">{{ veiculo.marca }}</span>
+                <span class="veiculo-modelo">{{ veiculo.modelo }}</span>
+              </td>
+              <td>{{ veiculo.ano }}</td>
+              <td>
+                <span class="tag-cor">{{ veiculo.cor }}</span>
+              </td>
+              <td>
+                <span class="tag-placa">{{ veiculo.placa }}</span>
+              </td>
+              <td class="td-preco">{{ formatarPreco(veiculo.preco) }}</td>
+              <td>
+                <span class="badge-status" [class.disponivel]="veiculo.disponivel" [class.indisponivel]="!veiculo.disponivel">
+                  {{ veiculo.disponivel ? '✅ Disponível' : '❌ Vendido' }}
+                </span>
+              </td>
+              <td class="td-acoes">
+                <button type="button" class="btn-editar" (click)="editar(veiculo)" title="Editar veículo">
+                  ✏️ Editar
+                </button>
+                <button type="button" class="btn-excluir" (click)="excluir(veiculo)" title="Excluir veículo">
+                  🗑️ Excluir
+                </button>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</section>

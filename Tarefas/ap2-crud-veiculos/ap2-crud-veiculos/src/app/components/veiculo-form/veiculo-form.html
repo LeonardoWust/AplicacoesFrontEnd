@@ -1,0 +1,156 @@
+<section class="form-section">
+  <div class="form-header">
+    <h2 class="form-title">
+      @if (modoEdicao) {
+        ✏️ Editar Veículo
+      } @else {
+        ➕ Cadastrar Veículo
+      }
+    </h2>
+    @if (modoEdicao) {
+      <button type="button" class="btn-cancelar" (click)="cancelarEdicao()">
+        ✕ Cancelar edição
+      </button>
+    }
+  </div>
+
+  @if (mensagem) {
+    <div class="alerta" [class.alerta-sucesso]="mensagemTipo === 'sucesso'" [class.alerta-erro]="mensagemTipo === 'erro'">
+      {{ mensagem }}
+    </div>
+  }
+
+  <form (ngSubmit)="salvar()" #formVeiculo="ngForm" class="form-grid">
+
+    <div class="form-group">
+      <label for="marca">Marca *</label>
+      <input
+        id="marca"
+        name="marca"
+        type="text"
+        [(ngModel)]="veiculo.marca"
+        required
+        minlength="2"
+        placeholder="Ex: Toyota, Honda, Ford..."
+        #marcaInput="ngModel"
+      />
+      @if (marcaInput.invalid && marcaInput.touched) {
+        <span class="campo-erro">Marca é obrigatória (mín. 2 caracteres)</span>
+      }
+    </div>
+
+    <div class="form-group">
+      <label for="modelo">Modelo *</label>
+      <input
+        id="modelo"
+        name="modelo"
+        type="text"
+        [(ngModel)]="veiculo.modelo"
+        required
+        minlength="2"
+        placeholder="Ex: Corolla, Civic, Ka..."
+        #modeloInput="ngModel"
+      />
+      @if (modeloInput.invalid && modeloInput.touched) {
+        <span class="campo-erro">Modelo é obrigatório (mín. 2 caracteres)</span>
+      }
+    </div>
+
+    <div class="form-group">
+      <label for="ano">Ano *</label>
+      <input
+        id="ano"
+        name="ano"
+        type="number"
+        [(ngModel)]="veiculo.ano"
+        required
+        min="1950"
+        [max]="2026"
+        placeholder="Ex: 2023"
+        #anoInput="ngModel"
+      />
+      @if (anoInput.invalid && anoInput.touched) {
+        <span class="campo-erro">Ano inválido (entre 1950 e 2026)</span>
+      }
+    </div>
+
+    <div class="form-group">
+      <label for="cor">Cor *</label>
+      <input
+        id="cor"
+        name="cor"
+        type="text"
+        [(ngModel)]="veiculo.cor"
+        required
+        placeholder="Ex: Prata, Preto, Branco..."
+        #corInput="ngModel"
+      />
+      @if (corInput.invalid && corInput.touched) {
+        <span class="campo-erro">Cor é obrigatória</span>
+      }
+    </div>
+
+    <div class="form-group">
+      <label for="placa">Placa *</label>
+      <input
+        id="placa"
+        name="placa"
+        type="text"
+        [(ngModel)]="veiculo.placa"
+        required
+        placeholder="Ex: ABC-1234 ou ABC1D23"
+        #placaInput="ngModel"
+      />
+      @if (placaInput.invalid && placaInput.touched) {
+        <span class="campo-erro">Placa é obrigatória</span>
+      }
+    </div>
+
+    <div class="form-group">
+      <label for="preco">Preço (R$) *</label>
+      <input
+        id="preco"
+        name="preco"
+        type="number"
+        [(ngModel)]="veiculo.preco"
+        required
+        min="1"
+        placeholder="Ex: 85000"
+        #precoInput="ngModel"
+      />
+      @if (precoInput.invalid && precoInput.touched) {
+        <span class="campo-erro">Preço deve ser maior que zero</span>
+      }
+    </div>
+
+    <div class="form-group form-group-checkbox">
+      <label class="checkbox-label">
+        <input
+          name="disponivel"
+          type="checkbox"
+          [(ngModel)]="veiculo.disponivel"
+          class="checkbox-input"
+        />
+        <span class="checkbox-custom"></span>
+        Disponível para venda
+      </label>
+    </div>
+
+    <div class="form-actions">
+      <button
+        type="submit"
+        class="btn-salvar"
+        [disabled]="formVeiculo.invalid || salvando"
+      >
+        @if (salvando) {
+          ⏳ Salvando...
+        } @else if (modoEdicao) {
+          💾 Salvar alterações
+        } @else {
+          🚗 Cadastrar veículo
+        }
+      </button>
+    </div>
+
+  </form>
+</section>

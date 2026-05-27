@@ -1,0 +1,264 @@
+.list-section {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
+}
+
+.list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.list-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin: 0;
+}
+
+.list-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.total-badge {
+  background: #0f3460;
+  color: white;
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.btn-atualizar {
+  background: transparent;
+  border: 2px solid #cbd5e0;
+  color: #4a5568;
+  padding: 0.35rem 0.85rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.btn-atualizar:hover {
+  border-color: #0f3460;
+  color: #0f3460;
+}
+
+/* States */
+.estado-lista {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #718096;
+}
+
+.estado-lista.erro {
+  background: #fff5f5;
+  border-radius: 8px;
+  border: 1px solid #fed7d7;
+  color: #c53030;
+}
+
+.estado-lista.vazio {
+  background: #f7fafc;
+  border-radius: 8px;
+  border: 2px dashed #cbd5e0;
+}
+
+.estado-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.estado-dica {
+  font-size: 0.85rem;
+  color: #a0aec0;
+  margin-top: 0.25rem;
+}
+
+.btn-tentar {
+  margin-top: 1rem;
+  background: #e94560;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.25rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.btn-tentar:hover {
+  background: #c0392b;
+}
+
+/* Spinner */
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #e2e8f0;
+  border-top-color: #0f3460;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Table */
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.tabela-veiculos {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.tabela-veiculos thead {
+  background: linear-gradient(135deg, #1a1a2e, #0f3460);
+}
+
+.tabela-veiculos thead th {
+  padding: 0.9rem 1rem;
+  text-align: left;
+  color: #a0aec0;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  white-space: nowrap;
+}
+
+.linha-veiculo {
+  border-bottom: 1px solid #edf2f7;
+  transition: background 0.15s;
+}
+
+.linha-veiculo:last-child {
+  border-bottom: none;
+}
+
+.linha-veiculo:hover {
+  background: #f7fafc;
+}
+
+.tabela-veiculos td {
+  padding: 0.9rem 1rem;
+  color: #2d3748;
+  vertical-align: middle;
+}
+
+.td-veiculo {
+  display: flex;
+  flex-direction: column;
+}
+
+.veiculo-marca {
+  font-weight: 700;
+  color: #1a1a2e;
+  font-size: 0.95rem;
+}
+
+.veiculo-modelo {
+  font-size: 0.82rem;
+  color: #718096;
+}
+
+.tag-cor {
+  background: #edf2f7;
+  color: #4a5568;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+.tag-placa {
+  font-family: 'Courier New', monospace;
+  background: #1a1a2e;
+  color: #f0e68c;
+  padding: 0.25rem 0.65rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.td-preco {
+  font-weight: 700;
+  color: #276749;
+  font-size: 0.95rem;
+}
+
+.badge-status {
+  padding: 0.3rem 0.7rem;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.badge-status.disponivel {
+  background: #c6f6d5;
+  color: #276749;
+}
+
+.badge-status.indisponivel {
+  background: #fed7d7;
+  color: #9b2c2c;
+}
+
+.td-acoes {
+  white-space: nowrap;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.btn-editar,
+.btn-excluir {
+  padding: 0.35rem 0.75rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-editar {
+  background: #ebf8ff;
+  color: #2b6cb0;
+  border: 1px solid #bee3f8;
+}
+
+.btn-editar:hover {
+  background: #2b6cb0;
+  color: white;
+}
+
+.btn-excluir {
+  background: #fff5f5;
+  color: #c53030;
+  border: 1px solid #fed7d7;
+}
+
+.btn-excluir:hover {
+  background: #c53030;
+  color: white;
+}

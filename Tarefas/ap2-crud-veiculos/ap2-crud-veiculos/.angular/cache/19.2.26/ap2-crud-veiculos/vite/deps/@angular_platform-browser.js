@@ -1,19 +1,19 @@
 import {
-  withHttpTransferCache
-} from "./chunk-6STJIIID.js";
-import {
   CommonModule,
   DomAdapter,
   getDOM,
   setRootDomAdapter
-} from "./chunk-HF4GGK36.js";
+} from "./chunk-RUOEYGJB.js";
+import {
+  withHttpTransferCache
+} from "./chunk-D2TCCLTT.js";
 import {
   DOCUMENT,
   PLATFORM_BROWSER_ID,
   XhrFactory,
   isPlatformServer,
   parseCookieValue
-} from "./chunk-X7A2DI2P.js";
+} from "./chunk-4VZB2KY4.js";
 import {
   APP_ID,
   ApplicationModule,

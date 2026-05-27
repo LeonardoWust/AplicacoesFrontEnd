@@ -2,7 +2,7 @@
 
 ## Identificação
 
-Nome: [Seu Nome Aqui]
+Nome: Leonardo Gonçalves Wust
 Curso: Análise e Desenvolvimento de Sistemas
 Disciplina: Aplicações Front-End
 Instituição: ULBRA
@@ -103,7 +103,7 @@ http://localhost:4200
 
 ## Link do vídeo demonstrativo
 
-[Adicionar link público do vídeo aqui]
+https://drive.google.com/file/d/1gh0WgOha5yaMmWbeesVvC4TrdHY1ubcc/view?usp=sharing
 
 ## Funcionalidades
 

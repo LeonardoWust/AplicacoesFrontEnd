@@ -29,7 +29,17 @@
       "placa": "DEF-9012",
       "preco": 89000,
       "disponivel": true
+    },
+    {
+      "marca": "Volkswagen",
+      "modelo": "Gol Bola",
+      "ano": 2020,
+      "cor": "Preto",
+      "placa": "JFI3344",
+      "preco": 70000,
+      "disponivel": false,
+      "id": "0QdTbKC_V3g"
     }
   ],
-  "$schema": "./node_modules/json-server/schema.json"
+  "$schema": ["./node_modules/json-server/schema.json"]
 }

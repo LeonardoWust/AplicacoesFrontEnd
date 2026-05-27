@@ -103,7 +103,7 @@ http://localhost:4200
 
 ## Link do vídeo demonstrativo
 
-https://drive.google.com/file/d/1gh0WgOha5yaMmWbeesVvC4TrdHY1ubcc/view?usp=sharing
+https://drive.google.com/file/d/1WLcykoprVaS7Q2eDSLV0M8fN5i-UpWFE/view?usp=sharing
 
 ## Funcionalidades
 
